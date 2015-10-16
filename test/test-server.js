@@ -16,14 +16,14 @@ describe('Routes', function (){
     });
   });
 
-  it('should have a status 404', function(done){
-    chai.request(server)
-    .get('/')
-    .end(function(err, res){
-      res.should.have.status(404);
-      // done();
-    });
-  });
+  // it('should have a status 404', function (done){
+  //   chai.request(server)
+  //   .get('/')
+  //   .end(function(err, res){
+  //     res.should.have.status(404);
+  //     done();
+  //   });
+  // });
 
 });
 
