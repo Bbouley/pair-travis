@@ -1,14 +1,19 @@
 language: node_js
-
 node_js:
 - '4.1'
 - '4.0'
 - '0.12'
 - '0.11'
-
 services: mongodb
-
 before_script:
- - npm install -g mocha
-
+- npm install -g mocha
 script: mocha
+deploy:
+  provider: heroku
+  api_key:
+    secure: RizlZtm4b+luI7lWSjBDVslV5ZY1HtX9br5Nd/EZBFHQjV+ANJKtEyEU0BqCq1NgZ0Kh8m0upZWNctsXFnPpoGsnc+8Y2/2TAJ342pLS0RzqhqespvKduBTXHBeW3RfKe84DklEC1wswuT+GMfb56wVm53QhP3VVDwj0r7o0lNpXMxiMhuWFZeZ3L/iAPObGCEvTU4fsrIx6K/NjsPQjbfVTiBPkLlm+SZDMqpjhUg3RkXOO6McyQLZojF8x6JxIStmIdXcAlPPARYy+x/q974AEkUtPB45NP5JIMxNvIQxcWPfcR6ec+bfLq+rM/HKDkD58un0hpno9pZK6P/+PsiCyrlP8H7AWHFhrgnozMCBwpRgI0XAgdjOBFxzT1l4sHJXtC5YUKV/2haLD0i4XnniB7NhyNI2TN09OHJ4wYw5zNjSU/luz8/ogCcrQqLJexCiytJqIVAj1NuS08HHpUxf3JS55LTH7PRG41imWKVuTeWAt9fMqARbYqbxKzxXwMnTHgF6vznANC3F9hw9r6s0+AJXmIGEFobKgk2YDLSJ15/aui9JAd1QrK5/xJsnKD4USpiNGmIrZ6ZLMKeft+UTWvbg0kExc420adS7vPp96U2FwhXCk9VxGYaRNCcCHZ0E9VHVSE7Mq2hrSj/51vMkufi2vvIbhTpWuUWyJjqk=
+  app: stark-hollows-9217
+  on:
+    branch: master
+    repo: Bbouley/pair-travis
+    node: '0.12'
